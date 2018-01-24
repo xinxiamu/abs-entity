@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ymu.abs</groupId>
+        <artifactId>abs-dependencies</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../abs-dependencies</relativePath>
+    </parent>
+    <groupId>com.ymu.abs</groupId>
+    <artifactId>abs-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>abs-parent</name>
+    <description>
+        spring-cloud微服务架构
+    </description>
+
+    <properties>
+        <!--<main.basedir>${basedir}/../..</main.basedir>-->
+
+        <!--http://cloud.spring.io/spring-cloud-static/Edgware.SR1/-->
+        <spring.cloud.version>Edgware.SR1</spring.cloud.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.ymu.spcselling</groupId>
+                <artifactId>spcselling-infrastructure</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ymu.spcselling</groupId>
+                <artifactId>service-sys-common-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ymu.spcselling</groupId>
+                <artifactId>entity-constants</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <!-- spring cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 项目模块应用 -->
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-apis</artifactId>
+                <version>1.0.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-data-jpa</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
