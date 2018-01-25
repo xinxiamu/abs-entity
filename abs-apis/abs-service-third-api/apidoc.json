@@ -1,0 +1,23 @@
+{
+    "name": "系统公共服务接口",
+    "version": "1.0.0",
+    "description": "service-sys-common",
+    "title": "公共服务api",
+    "url": "http://api.ymu.spcs",
+    "header": {
+        "title": "",
+        "filename": "header.md"
+    },
+    "footer": {
+        "title": "",
+        "filename": "footer.md"
+    },
+    "order": [
+        "GetUser",
+        "PostUser"
+    ],
+    "template": {
+        "withCompare": true,
+        "withGenerator": true
+    }
+}

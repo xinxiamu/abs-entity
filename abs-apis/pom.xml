@@ -18,9 +18,10 @@
     </properties>-->
 
     <modules>
-       <!-- <module>service-sys-common-api</module>
-        <module>service-basic-user-api</module>
-        <module>apis-common-lib</module>-->
+      <module>abs-service-common-api</module>
+        <module>abs-service-core-api</module>
+        <module>abs-service-createpdf-api</module>
+        <module>abs-service-third-api</module>
     </modules>
 
 </project>

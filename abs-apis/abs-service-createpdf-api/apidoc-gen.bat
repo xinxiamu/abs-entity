@@ -1,0 +1,1 @@
+apidoc -i src/main/java/ -o ../../apidocs/service-sys-common-api
