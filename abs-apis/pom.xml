@@ -13,15 +13,13 @@
     <name>abs-apis</name>
     <description>微服务对外暴露接口</description>
 
-   <!-- <properties>
-        <main.basedir>${basedir}/..</main.basedir>
-    </properties>-->
-
     <modules>
       <module>abs-service-common-api</module>
         <module>abs-service-core-api</module>
         <module>abs-service-createpdf-api</module>
         <module>abs-service-third-api</module>
+        <module>abs-service-log-api</module>
+        <module>abs-service-dic-api</module>
     </modules>
 
 </project>
