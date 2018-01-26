@@ -10,9 +10,9 @@
     <artifactId>abs-entity</artifactId>
     <packaging>pom</packaging>
     <name>abs-entity</name>
-    <description>业务基础支撑服务对应数据库</description>
-    <!--<modules>
-        <module>entity-constants</module>
-        <module>entity-user</module>
-    </modules>-->
+    <description>服务对应数据库实体</description>
+
+    <modules>
+        <module>abs-entity-core</module>
+    </modules>
 </project>
