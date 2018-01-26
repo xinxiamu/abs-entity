@@ -1,4 +1,4 @@
-package com.abs.entity.log;
+package com.abs.infrastructure.base;
 
 import javax.persistence.*;
 import java.io.Serializable;
