@@ -11,10 +11,14 @@
     <packaging>pom</packaging>
     <name>abs-services</name>
     <description>系统所有服务</description>
-   <!-- <modules>
-        <module>spsselling-services-basic</module>
-        <module>spcselling-services-business</module>
-        <module>spcselling-services-sys</module>
-    </modules>-->
+
+    <modules>
+        <module>abs-service-core</module>
+        <module>abs-service-dic</module>
+        <module>abs-service-log</module>
+        <module>abs-service-third</module>
+        <module>abs-service-common</module>
+        <module>abs-service-createpdf</module>
+    </modules>
 
 </project>

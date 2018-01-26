@@ -8,10 +8,10 @@
         <version>1.0.0</version>
         <relativePath>../../abs-parent</relativePath>
     </parent>
-    <artifactId>abs-entity-core</artifactId>
+    <artifactId>abs-entity-dic</artifactId>
     <packaging>jar</packaging>
-    <name>abs-entity-core</name>
-    <description>核心业务表实体</description>
+    <name>abs-entity-dic</name>
+    <description>字典表实体</description>
     
     <dependencies>
         <dependency>

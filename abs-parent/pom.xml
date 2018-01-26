@@ -51,22 +51,11 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.ymu.spcselling</groupId>
-                <artifactId>spcselling-infrastructure</artifactId>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-infrastructure</artifactId>
                 <version>1.0.0</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.ymu.spcselling</groupId>
-                <artifactId>service-sys-common-api</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.ymu.spcselling</groupId>
-                <artifactId>entity-constants</artifactId>
-                <version>1.0.0</version>
-            </dependency>
 
             <!-- spring cloud -->
             <dependency>
@@ -80,14 +69,49 @@
             <!-- 项目模块应用 -->
             <dependency>
                 <groupId>com.ymu.abs</groupId>
-                <artifactId>abs-apis</artifactId>
+                <artifactId>abs-service-core-api</artifactId>
                 <version>1.0.0</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-data-jpa</artifactId>
-                    </exclusion>
-                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-service-third-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-service-createpdf-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-service-common-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-service-log-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-service-dic-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-entity-core</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-entity-log</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-entity-dic</artifactId>
+                <version>1.0.0</version>
             </dependency>
 
         </dependencies>

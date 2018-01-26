@@ -8,12 +8,13 @@
 		<version>1.0.0</version>
 		<relativePath>../../abs-parent</relativePath> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>abs-service-third</artifactId>
+	<artifactId>abs-service-log</artifactId>
 	<packaging>jar</packaging>
-	<name>abs-service-third</name>
-	<description>第三方对接服务</description>
+	<name>abs-service-log</name>
+	<description>系统日志服务</description>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

@@ -14,5 +14,7 @@
 
     <modules>
         <module>abs-entity-core</module>
+        <module>abs-entity-dic</module>
+        <module>abs-entity-log</module>
     </modules>
 </project>
