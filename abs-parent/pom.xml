@@ -50,13 +50,6 @@
     <dependencyManagement>
         <dependencies>
 
-            <dependency>
-                <groupId>com.ymu.abs</groupId>
-                <artifactId>abs-infrastructure</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-
-
             <!-- spring cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -67,6 +60,12 @@
             </dependency>
 
             <!-- 项目模块应用 -->
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-infrastructure</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.ymu.abs</groupId>
                 <artifactId>abs-service-core-api</artifactId>
