@@ -48,13 +48,6 @@ public abstract class BaseEntity implements Serializable, Cloneable {
     @Enumerated(EnumType.STRING)
     protected ClientDeviceType clientDeviceType;
 
-    /**
-     * 系统类型。
-     */
-    @Column(length = 50)
-    @Enumerated(EnumType.STRING)
-    protected SysPlatformType sysPlatformType;
-
     public enum ClientDeviceType {
 
         ANDROID("android"),
@@ -73,37 +66,12 @@ public abstract class BaseEntity implements Serializable, Cloneable {
 
     }
 
-    public enum SysPlatformType {
-
-        IPS("ips"),
-        CMP("cmp");
-
-        private final String value;
-
-        SysPlatformType(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-    }
-
     public ClientDeviceType getClientDeviceType() {
         return clientDeviceType;
     }
 
     public void setClientDeviceType(ClientDeviceType clientDeviceType) {
         this.clientDeviceType = clientDeviceType;
-    }
-
-    public SysPlatformType getSysPlatformType() {
-        return sysPlatformType;
-    }
-
-    public void setSysPlatformType(SysPlatformType sysPlatformType) {
-        this.sysPlatformType = sysPlatformType;
     }
 
     public Long getId() {
