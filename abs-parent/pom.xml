@@ -66,6 +66,7 @@
                 <version>1.0.0</version>
             </dependency>
 
+            <!--////////// api ////////////-->
             <dependency>
                 <groupId>com.ymu.abs</groupId>
                 <artifactId>abs-service-core-api</artifactId>
@@ -96,7 +97,13 @@
                 <artifactId>abs-service-dic-api</artifactId>
                 <version>1.0.0</version>
             </dependency>
+            <dependency>
+                <groupId>com.ymu.abs</groupId>
+                <artifactId>abs-service-fileclient-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
 
+            <!--//////// 实体 ///////////////-->
             <dependency>
                 <groupId>com.ymu.abs</groupId>
                 <artifactId>abs-entity-core</artifactId>
