@@ -19,6 +19,7 @@
         <module>abs-service-third</module>
         <module>abs-service-common</module>
         <module>abs-service-createpdf</module>
+        <module>abs-service-fileclient</module>
     </modules>
 
 </project>

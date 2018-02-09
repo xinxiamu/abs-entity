@@ -20,6 +20,7 @@
         <module>abs-service-third-api</module>
         <module>abs-service-log-api</module>
         <module>abs-service-dic-api</module>
+        <module>abs-service-fileclient-api</module>
     </modules>
 
 </project>
