@@ -1,7 +1,8 @@
-package com.abs.entity.log;
+package com.abs.entity.core;
 
-import com.abs.entity.log.constants.UserUsableType;
-import com.abs.entity.log.constants.UserType;
+import com.abs.entity.core.constants.UserType;
+import com.abs.entity.core.constants.UserUsableType;
+import com.abs.infrastructure.base.BaseEntity;
 
 import javax.persistence.*;
 import java.util.Date;

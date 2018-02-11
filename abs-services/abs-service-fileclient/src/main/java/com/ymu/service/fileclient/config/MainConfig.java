@@ -1,52 +1,56 @@
 package com.ymu.service.fileclient.config;
 
-import com.abs.infrastructure.spring.AppContext;
-import com.abs.infrastructure.spring.SpringBeanFactory;
 import org.csource.common.MyException;
 import org.csource.fastdfs.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 
 @Configuration
 public class MainConfig {
 
-    /**
-     * 环境上下文。
-     *
-     * @return
-     */
-    @Bean
-    public AppContext appContext() {
-        return new AppContext();
-    }
-
-    /**
-     * Bean工厂。
-     *
-     * @return
-     */
-    @Bean
-    public SpringBeanFactory springBeanFactory() {
-        return new SpringBeanFactory();
-    }
+    @Value("${fdfs.tracker_servers}")
+    private String trackerServers;
+    @Value("${fdfs.connect_timeout}")
+    private int connectTimeout;
+    @Value("${fdfs.network_timeout}")
+    private int networkTimeout;
+    @Value("${fdfs.charset}")
+    private String charset;
+    @Value("${fdfs.http.tracker_http_port}")
+    private int trackerHttpPort;
+    @Value("${fdfs.http.anti_steal_token}")
+    private boolean antiStealToken;
+    @Value("${fdfs.http.secret_key}")
+    private String secretKey;
 
     @Bean
     public StorageClient1 fdfsStorageClient1() throws IOException, MyException {
-        String trackerServers = "40.125.171.31:22122";
         ClientGlobal.initByTrackers(trackerServers);
-        ClientGlobal.setG_connect_timeout(30);
+        ClientGlobal.setG_connect_timeout(connectTimeout);
+        ClientGlobal.setG_network_timeout(networkTimeout);
+        ClientGlobal.setG_charset(charset);
+        ClientGlobal.setG_tracker_http_port(trackerHttpPort);
+        ClientGlobal.setG_anti_steal_token(antiStealToken);
+        ClientGlobal.setG_secret_key(secretKey);
         System.out.println("ClientGlobal.configInfo() : " + ClientGlobal.configInfo());
 
-        TrackerClient tracker = new TrackerClient();
-        TrackerServer trackerServer = tracker.getConnection();
-        StorageServer storageServer = null;
-        StorageClient1 client = new StorageClient1(trackerServer, storageServer);
-        return  client;
+        TrackerClient tc = new TrackerClient();
+
+        TrackerServer ts = tc.getConnection();
+        if (ts == null) {
+            throw new NullPointerException("FastDFS获取TrackerServer连接失败!");
+        }
+
+        StorageServer ss = tc.getStoreStorage(ts);
+        if (ss == null) {
+            throw new NullPointerException("FastDFS获取StorageServer连接失败!");
+        }
+
+        StorageClient1 sc1 = new StorageClient1(ts, ss);
+        return  sc1;
     }
 }

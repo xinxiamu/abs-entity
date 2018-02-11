@@ -3,6 +3,7 @@ package com.abs.infrastructure.spring;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.stereotype.Component;
 
 /**
  * 获取spring容器中的bean实例实现类。
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.BeanFactoryAware;
  * @author Administrator
  * 
  */
+@Component
 public class SpringBeanFactory implements BeanFactoryAware {
 
 	private static BeanFactory beanFactory;

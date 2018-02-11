@@ -1,6 +1,7 @@
-package com.abs.entity.log;
+package com.abs.entity.core;
 
-import com.abs.entity.log.constants.UserSexType;
+import com.abs.entity.core.constants.UserSexType;
+import com.abs.infrastructure.base.BaseEntity;
 
 import javax.persistence.*;
 import java.util.Date;

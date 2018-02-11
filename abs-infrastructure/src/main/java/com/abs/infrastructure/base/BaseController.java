@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
 public abstract class BaseController {
 
     @InitBinder

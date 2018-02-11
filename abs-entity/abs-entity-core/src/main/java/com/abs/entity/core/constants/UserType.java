@@ -1,4 +1,4 @@
-package com.abs.entity.log.constants;
+package com.abs.entity.core.constants;
 
 /**
  * 会员类型
