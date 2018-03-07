@@ -1,4 +1,4 @@
-package com.ymu.service.fileclient.config;
+package com.abs.infrastructure.spring;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;

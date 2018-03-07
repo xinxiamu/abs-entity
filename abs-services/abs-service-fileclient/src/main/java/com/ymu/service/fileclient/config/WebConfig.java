@@ -1,5 +1,7 @@
 package com.ymu.service.fileclient.config;
 
+import com.abs.infrastructure.spring.CustomObjectMapper;
+import com.abs.infrastructure.spring.JsonViewHttpMessageConverter;
 import com.abs.infrastructure.spring.mvc.api.CustomRequestMappingHandlerMapping;
 import com.abs.infrastructure.spring.mvc.sensitive.SensitiveFormatAnnotationFormatterFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,7 +17,6 @@ import org.springframework.hateoas.hal.CurieProvider;
 import org.springframework.hateoas.hal.Jackson2HalModule;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.validation.Validator;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -113,10 +114,6 @@ public class WebConfig extends WebMvcConfigurationSupport {
         return super.getValidator();
     }
 
-    /**
-     * 过滤敏感词。
-     * @param registry
-     */
     @Override
     protected void addFormatters(FormatterRegistry registry) {
         registry.addFormatterForFieldAnnotation (new SensitiveFormatAnnotationFormatterFactory());
