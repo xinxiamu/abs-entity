@@ -20,7 +20,7 @@
         <!--<main.basedir>${basedir}/../..</main.basedir>-->
 
         <!--http://cloud.spring.io/spring-cloud-static/Edgware.SR1/-->
-        <spring.cloud.version>Edgware.SR1</spring.cloud.version>
+        <spring.cloud.version>Edgware.SR2</spring.cloud.version>
     </properties>
 
     <dependencies>

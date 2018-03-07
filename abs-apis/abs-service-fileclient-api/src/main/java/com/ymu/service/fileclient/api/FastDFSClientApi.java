@@ -1,6 +1,6 @@
 package com.ymu.service.fileclient.api;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 功能简述:<br>
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @updateTime
  * @since 1.0.0
  */
-@RestController
+@RequestMapping("/fdfsClient")
 public interface FastDFSClientApi {
 
 }
