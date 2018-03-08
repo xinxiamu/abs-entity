@@ -3,7 +3,7 @@
 <Configuration status="debug" name="XMLConfigTest"
 			   packages="org.apache.logging.log4j.test">
 	<Properties>
-		<property name="LOG_HOME">logs</property>
+		<property name="LOG_HOME">./logs</property>
 		<property name="FILE_NAME">abs-service-fileclient-log</property>
 	</Properties>
 	<ThresholdFilter level="trace" />
