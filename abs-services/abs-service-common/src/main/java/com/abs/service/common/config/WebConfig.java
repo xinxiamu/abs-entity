@@ -1,18 +1,31 @@
-package com.ymu.service.fileclient.config;
+package com.abs.service.common.config;
 
+import com.abs.infrastructure.base.VBase;
+import com.abs.infrastructure.spring.CustomObjectMapper;
 import com.abs.infrastructure.spring.JsonViewHttpMessageConverter;
 import com.abs.infrastructure.spring.mvc.api.CustomRequestMappingHandlerMapping;
 import com.abs.infrastructure.spring.mvc.sensitive.SensitiveFormatAnnotationFormatterFactory;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.hateoas.RelProvider;
+import org.springframework.hateoas.hal.CurieProvider;
+import org.springframework.hateoas.hal.Jackson2HalModule;
+import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.validation.Validator;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static org.springframework.hateoas.MediaTypes.HAL_JSON;
 
 /**
  * 采用继承WebMvcConfigurationSupport方式。

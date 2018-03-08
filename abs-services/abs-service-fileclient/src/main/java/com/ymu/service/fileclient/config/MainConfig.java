@@ -58,26 +58,4 @@ public class MainConfig {
         return  sc1;
     }
 
-    @Bean
-    public CorsFilter corsFilter(@Autowired CorsRegistrationConfig corsRegistrationConfig) {
-        //1.添加CORS配置信息
-        CorsConfiguration config = new CorsConfiguration();
-        //放行哪些原始域
-        config.addAllowedOrigin(corsRegistrationConfig.getAllowedOrigins());
-        //是否发送Cookie信息
-        config.setAllowCredentials(corsRegistrationConfig.getAllowCredentials());
-        //放行哪些原始域(请求方式)
-        config.addAllowedMethod(corsRegistrationConfig.getAllowedMethods());
-        //放行哪些原始域(头部信息)
-        config.addAllowedHeader(corsRegistrationConfig.getAllowedHeaders());
-        //暴露哪些头部信息（因为跨域访问默认不能获取全部头部信息）
-//        config.addExposedHeader("header-1,header-2");
-
-        //2.添加映射路径
-        UrlBasedCorsConfigurationSource configSource = new UrlBasedCorsConfigurationSource();
-        configSource.registerCorsConfiguration("/**", config);
-
-        //3.返回新的CorsFilter.
-        return new CorsFilter(configSource);
-    }
 }

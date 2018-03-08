@@ -1,8 +1,6 @@
-package com.ymu.service.fileclient.vo;
+package com.abs.infrastructure.base;
 
 import com.alibaba.fastjson.JSON;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.hateoas.ResourceSupport;
 
 import java.io.Serializable;

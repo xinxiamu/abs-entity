@@ -1,6 +1,5 @@
 package com.ymu.service.fileclient.api;
 
-import com.abs.infrastructure.spring.mvc.sensitive.SensitiveFormat;
 import com.ymu.service.fileclient.vo.req.VTestReq;
 import com.ymu.service.fileclient.vo.resp.VTestResp;
 import org.springframework.web.bind.annotation.GetMapping;

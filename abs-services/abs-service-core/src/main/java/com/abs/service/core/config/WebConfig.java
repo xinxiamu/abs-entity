@@ -1,4 +1,4 @@
-package com.ymu.service.fileclient.config;
+package com.abs.service.core.config;
 
 import com.abs.infrastructure.spring.JsonViewHttpMessageConverter;
 import com.abs.infrastructure.spring.mvc.api.CustomRequestMappingHandlerMapping;

@@ -1,7 +1,6 @@
 package com.ymu.service.fileclient.vo.req;
 
-import com.abs.infrastructure.spring.mvc.sensitive.SensitiveFormat;
-import com.ymu.service.fileclient.vo.VBase;
+import com.abs.infrastructure.base.VBase;
 
 /**
  * 功能简述:<br>
@@ -13,7 +12,6 @@ import com.ymu.service.fileclient.vo.VBase;
  */
 public class VTestReq extends VBase {
 
-    @SensitiveFormat
     private String name;
 
     private boolean sex;
