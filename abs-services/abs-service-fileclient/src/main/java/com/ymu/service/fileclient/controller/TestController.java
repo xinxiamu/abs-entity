@@ -8,6 +8,7 @@ import com.ymu.service.fileclient.vo.req.VTestReqValidator;
 import com.ymu.service.fileclient.vo.resp.VTestResp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.hateoas.Link;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
@@ -23,9 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 1.0.0
  */
 @RestController
+@RefreshScope
 public class TestController extends BaseController implements TestApi {
-
-    private static final Logger logger = LogManager.getLogger(TestController.class);
 
     @Override
     protected void initBinder(WebDataBinder binder) {
