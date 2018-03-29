@@ -64,6 +64,12 @@
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
 		</dependency>
+
+		<!--<dependency>
+			<groupId>com.ymu</groupId>
+			<artifactId>ymu-framework</artifactId>
+			<version>1.0</version>
+		</dependency>-->
         
 	</dependencies>
 
