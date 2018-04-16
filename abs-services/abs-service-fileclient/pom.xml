@@ -50,10 +50,10 @@
 			<artifactId>fastdfs-client-java</artifactId>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>com.ymu.abs</groupId>
 			<artifactId>abs-infrastructure</artifactId>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

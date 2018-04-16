@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.ymu.service.fileclient","com.abs.infrastructure.spring"})
+@ComponentScan(basePackages = {"com.ymu.service.fileclient","com.ymu.framework"})
 @EnableEurekaClient
 @EnableDiscoveryClient
 public class AbsServiceFileclientApplication {

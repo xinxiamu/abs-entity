@@ -1,10 +1,10 @@
 package com.ymu.service.fileclient.controller;
 
-import com.abs.infrastructure.base.BaseController;
+import com.ymu.framework.base.AbstractController;
 import com.ymu.service.fileclient.api.FastDFSClientApi;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FastDFSClientController extends BaseController implements FastDFSClientApi {
+public class FastDFSClientController extends AbstractController implements FastDFSClientApi {
 
 }

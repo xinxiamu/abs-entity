@@ -1,18 +1,18 @@
 spring:
   application:
-    name: abs-service-fileclient
+    name: service-fileclient
 
 ---
 spring:
   cloud:
     config: #配置中心
-      name: abs-service-fileclient #在配置仓库的配置名称
+      name: service-fileclient #在配置仓库的配置名称
       profile: dev
       label: master
       fail-fast: true
       discovery:
         enabled: true
-        service-id: abs-config-server
+        service-id: ymu-config-server
       username: admin
       password: 123456
 
