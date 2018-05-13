@@ -141,4 +141,5 @@ nbdist/
 .nb-gradle/
 
 #### my ###
+.logs
 
